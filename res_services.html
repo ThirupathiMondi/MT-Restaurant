@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Cedarville+Cursive&family=Pacifico&display=swap"
+		rel="stylesheet">
+	<title>Restaurant Services</title>
+	<style>
+		body {
+			font-family: Tahoma, sans-serif;
+			margin: 0px;
+			background-color: black;
+			color: white;
+		}
+
+		header {
+			position: fixed;
+			z-index: 10;
+			top: 0px;
+		}
+
+		nav {
+			background-color: rgb(194, 105, 27);
+			height: 75px;
+			width: 1600px;
+		}
+
+		nav h2 {
+			/* color: #F9EBC8; */
+			color: white;
+			position: absolute;
+			top: -25px;
+			left: 100px;
+			font-family: 'Agbalumo';
+			font-size: 40px;
+			font-weight: 500;
+		}
+
+		ul {
+			position: relative;
+			top: -65px;
+			left: 600px;
+			width: 700px;
+		}
+
+		.drop-items {
+			list-style-type: none;
+			display: none;
+			width: fit-content;
+			padding: 10px;
+		}
+
+		.drop-items .drop-items-item {
+			margin: 0px;
+			display: block;
+			padding: 4px;
+		}
+
+		.dropdown:hover .drop-items {
+			position: absolute;
+			z-index: 1;
+			background-color: rgb(194, 105, 27);
+			border-radius: 10px;
+			display: block;
+			left: 335px;
+			top: 30px;
+		}
+
+		.nav-item {
+			display: inline;
+			margin-left: 60px;
+			padding: 10px;
+		}
+
+		a:link,
+		a:visited {
+			text-decoration: none;
+			color: white;
+		}
+
+		a:hover {
+			text-shadow: 3px 3px 5px black;
+			transition: all ease-in-out 0.2s;
+			color: black;
+			text-shadow: 2px 2px 5px white;
+		}
+
+		.border-style {
+			box-shadow: 2px 2px 10px white;
+			border-radius: 20px;
+		}
+
+		.color-style {
+			color: rgb(194, 105, 27);
+			font-family: 'Pacifico';
+		}
+
+		.dining {
+			position: absolute;
+			width: 1100px;
+			height: 250px;
+			left: 45px;
+			top: 150px;
+		}
+
+		.dining h2 {
+			position: absolute;
+			left: 100px;
+			top: -10px;
+		}
+
+		.dining-image img {
+			position: absolute;
+			height: 200px;
+			left: 30px;
+			top: 40px;
+		}
+
+		.dining div:last-child {
+			position: absolute;
+			left: 250px;
+			top: 60px;
+		}
+
+		.catering {
+			position: absolute;
+			width: 1100px;
+			height: 250px;
+			left: 250px;
+			top: 450px;
+		}
+
+		.catering h2 {
+			position: absolute;
+			left: 50px;
+			top: -10px;
+		}
+
+		.catering-image img {
+			position: absolute;
+			height: 200px;
+			left: 800px;
+			top: 30px;
+		}
+
+		.catering div:last-child {
+			position: absolute;
+			left: 50px;
+			top: 60px;
+			width: 800px;
+		}
+
+		.delivery {
+			position: absolute;
+			width: 1100px;
+			height: 250px;
+			left: 50px;
+			top: 750px;
+		}
+
+		.delivery h2 {
+			position: absolute;
+			left: 50px;
+			top: -10px;
+		}
+
+		.delivery-image img {
+			position: absolute;
+			height: 180px;
+			left: 40px;
+			top: 40px;
+		}
+
+		.delivery div:last-child {
+			position: absolute;
+			left: 280px;
+			top: 50px;
+			width: 800px;
+		}
+
+		.bar {
+			position: absolute;
+			width: 1100px;
+			height: 250px;
+			left: 250px;
+			top: 1050px;
+		}
+
+		.bar h2 {
+			position: absolute;
+			left: 50px;
+			top: -10px;
+		}
+
+		.bar-image img {
+			position: absolute;
+			height: 150px;
+			left: 900px;
+			top: 40px;
+		}
+
+		.bar div:last-child {
+			position: absolute;
+			left: 50px;
+			top: 60px;
+			width: 800px;
+		}
+
+		.center_hover {
+			position: absolute;
+			left: 250px;
+		}
+
+		.center_hover:hover {
+			transform: scale(1.03, 1.03);
+			transition: 0.5s;
+		}
+
+		.foot-color {
+			color: white;
+		}
+
+		.rights {
+			position: absolute;
+			color: rgb(64, 62, 62);
+			top: 34px;
+			right: 1%;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		}
+
+		.follow {
+			position: absolute;
+			top: -10px;
+			left: 45%;
+			font-size: 20px;
+		}
+
+		.brands {
+			position: absolute;
+			top: 45px;
+			left: 43%;
+		}
+
+		.brands i {
+			padding-left: 23px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h2> MT Restaurants</h2>
+			<img src="/images/restaurant_logo.png" alt="Restaurant logo" height="80">
+			<ul>
+				<li class="nav-item"><a href="index.html">Home</a></li>
+				<li class="nav-item"><a href="res_services.html">Services</a></li>
+				<li class="dropdown nav-item">
+					<a href="res_recipies.html">Menu<i class="fa-solid fa-caret-down"></i> </a>
+					<ul class="drop-items">
+						<li class="drop-items-item"><a href="res_recipies.html#starters-id">Starters</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#veg-main-course-id">Main Course</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#veg-main-course-id">Vegetarian</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#chicken-main-id">Non Vegetarian</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#desserts-id">Desserts</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#desserts-id">Juices</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#cool-drinks-id">Cool Drinks</a></li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="res_about.html">About</a></li>
+				<li class="nav-item"><a href="res_contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2 class="color-style" style="position: absolute; top: 70px;left: 50px;">Our Services :</h2>
+		<div class="dining border-style center_hover">
+			<h2 class="color-style"> Dining</h2>
+			<div class="dining-image">
+				<img src="/images/dining-removebg-preview.png" alt="">
+			</div>
+			<div>
+				<p> At our restaurant, we offer a truly exceptional dining experience. Our professional and friendly
+					staff strive to create an inviting atmosphere where guests can indulge in delectable cuisine. Our
+					menu boasts a wide range of dishes crafted with the finest, locally-sourced ingredients that are
+					sure to satisfy every palate. Whether you're looking for a quick, yet satisfying lunch or a
+					leisurely dinner, our restaurant is the perfect destination. We take great pride in our attention to
+					detail and our dedication to providing impeccable service. Come and enjoy an unforgettable dining
+					experience with us today! </p>
+			</div>
+		</div>
+		<div class="catering border-style center_hover">
+			<h2 class="color-style"> Catering</h2>
+			<div class="catering-image">
+				<img src="/images/catering-removebg-preview.png" alt="">
+			</div>
+			<div>
+				<p> At our restaurant, we offer exceptional catering services to elevate any event or occasion. Our team
+					of experienced chefs and dedicated staff work tirelessly to provide a seamless culinary experience
+					that will leave a lasting impression on your guests. From intimate gatherings to large-scale events,
+					we focus on delivering exquisite dishes made from high-quality ingredients, tailored to suit your
+					preferences and dietary needs. Our diverse menu options range from delectable passed hors d'oeuvres
+					and gourmet entrees to indulgent desserts, ensuring there's something for everyone. With our
+					meticulous attention to detail and commitment to exceptional service, let us take care of your
+					catering needs while you sit back and enjoy an unparalleled dining experience. </p>
+			</div>
+		</div>
+		<div class="delivery border-style center_hover">
+			<h2 class="color-style"> Delivery</h2>
+			<div class="delivery-image">
+				<img src="/images/delivery-removebg-preview.png" alt="">
+			</div>
+			<div>
+				<p> Our restaurant offers a convenient and reliable delivery service for our customers. Whether you are
+					craving a freshly prepared meal, a quick snack, or a refreshing beverage, our delivery service
+					ensures that you can enjoy our delectable dishes in the comfort of your own home or office. With a
+					wide range of menu options available, including vegetarian and gluten-free choices, our delivery
+					service caters to various dietary preferences and needs. Our efficient delivery team strives to
+					provide prompt and professional service, ensuring that your order arrives hot and ready to be
+					savored. Experience the convenience and culinary excellence of our delivery service today!</p>
+			</div>
+		</div>
+		<div class="bar border-style center_hover">
+			<h2 class="color-style"> Bar Services</h2>
+			<div class="bar-image">
+				<img src="/images/bar_services-removebg-preview.png" alt="">
+			</div>
+			<div>
+				<p> Our restaurant offers a sophisticated and vibrant bar service to enhance your dining experience. Our
+					skilled mixologists pride themselves on creating unique and flavorful cocktails, using only the
+					finest spirits and freshest ingredients. Whether you prefer classic concoctions or innovative,
+					handcrafted drinks, our bar menu has something to suit every taste. Enjoy a relaxed and inviting
+					atmosphere as our friendly staff attentively serves your favorite drinks, ensuring a memorable
+					evening out. Whether you're looking to unwind after a long day at work or celebrate a special
+					occasion, our exceptional bar service promises to elevate your dining experience to new heights.</p>
+			</div>
+		</div>
+	</main>
+	<footer style="		width: 100%;
+						background-color: rgb(194, 105, 27);
+						height: 80px;	
+						position: absolute;
+						bottom: -750px;">
+		<p class="rights foot-color">©All rights reserved</p>
+		<p class=" follow foot-color">Follow us on</p>
+		<div class="brands foot-color">
+			<a href="https://www.instagram/mtrestaurants.com"><i class="fa-brands fa-instagram fa-xl"></i></a>
+			<a href="https://www.twitter/mtrestaurants.com"> <i class="fa-brands fa-twitter fa-xl"></i></a>
+			<a href="https://www.facebook/mtrestaurants.com"><i class="fa-brands fa-facebook fa-xl"></i></a>
+		</div>
+	</footer>
+</body>
+
+</html>

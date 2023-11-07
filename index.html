@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Cedarville+Cursive&family=Montserrat:wght@100&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <title>Restaurant Home</title>
+  <style>
+    body {
+      background-image: url('images/res_bg.jpg');
+      background-size: 1600px 900px;
+      background-repeat: no-repeat;
+      font-family: Tahoma, sans-serif;
+      margin: 0px;
+    }
+
+    header {
+      position: sticky;
+      top: 0px;
+    }
+
+    nav {
+      /* background-color: rgba(0, 0, 0, 0.264); */
+      background-color: rgb(194, 105, 27);
+      height: 75px;
+    }
+
+    nav h2 {
+      /* color: #F9EBC8; */
+      color: white;
+      font-family: 'Agbalumo';
+      position: absolute;
+      top: -25px;
+      left: 80px;
+      font-size: 40px;
+    }
+
+    ul {
+      position: relative;
+      top: -65px;
+      left: 600px;
+      width: 700px;
+    }
+
+    .drop-items {
+      list-style-type: none;
+      display: none;
+      width: fit-content;
+      padding: 10px;
+    }
+
+    .drop-items .drop-items-item {
+      margin: 0px;
+      display: block;
+      padding: 4px;
+    }
+
+    .dropdown:hover .drop-items {
+      position: absolute;
+      z-index: 1;
+      /* border: 1px solid rgba(0, 0, 0, 0.264); */
+      border-top: none;
+      background-color: rgb(194, 105, 27);
+      border-radius: 10px;
+      display: block;
+      left: 335px;
+      top: 20px;
+    }
+
+    .nav-item {
+      display: inline;
+      margin-left: 60px;
+      padding: 10px;
+    }
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      /* color: #F9EBC8; */
+      color: white;
+    }
+
+    a:hover {
+      text-shadow: 3px 3px 5px white;
+      transition: all ease-in-out 0.2s;
+      color: black;
+    }
+
+    .intro {
+      position: absolute;
+      top: 100px;
+      left: 400px;
+      /* text-shadow: 5px 5px 8px #F9EBC8, -5px -5px 8px #F9EBC8; */
+      text-shadow: 5px 5px 8px white, -5px -5px 8px white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .foot-color {
+      color: white;
+    }
+
+    .rights {
+      position: absolute;
+      color: rgb(64, 62, 62);
+      top: 34px;
+      right: 1%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .follow {
+      position: absolute;
+      top: -10px;
+      left: 45%;
+      font-size: 20px;
+    }
+
+    .brands {
+      position: absolute;
+      top: 45px;
+      left: 43.5%;
+    }
+
+    .brands i {
+      padding-left: 23px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2 class="animate__animated animate__backInRight"> MT Restaurants</h2>
+      <img src="images/restaurant_logo.png" alt="Restaurant logo" height="80">
+      <ul>
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="res_services.html">Services</a></li>
+        <li class="dropdown nav-item">
+          <a href="res_recipies.html">Menu<i class="fa-solid fa-caret-down"></i> </a>
+          <ul class="drop-items">
+            <li class="drop-items-item"><a href="res_recipies.html#starters-id">Starters</a></li>
+            <li class="drop-items-item"><a href="res_recipies.html#veg-main-course-id">Main Course</a></li>
+            <li class="drop-items-item"><a href="res_recipies.html#veg-main-course-id">Vegetarian</a>
+            </li>
+            <li class="drop-items-item"><a href="res_recipies.html#chicken-main-id">Non Vegetarian</a></li>
+            <li class="drop-items-item"><a href="res_recipies.html#desserts-id">Desserts</a></li>
+            <li class="drop-items-item"><a href="res_recipies.html#desserts-id">Juices</a></li>
+            <li class="drop-items-item"><a href="res_recipies.html#cool-drinks-id">Cool Drinks</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="res_about.html">About</a></li>
+        <li class="nav-item"><a href="res_contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Welcome to MT Restaurants</h1>
+      <h2>Experience the Finest Culinary Delights</h2>
+    </div>
+  </main>
+  <footer style="
+						width: 100%;
+						background-color: rgb(194, 105, 27);
+						height: 80px;	
+						position: absolute;
+						bottom: -12%;">
+    <p class="rights foot-color">©All rights reserved</p>
+    <p class=" follow foot-color">Follow us on</p>
+    <div class="brands foot-color">
+      <a href="https://www.instagram/mtrestaurants.com"><i class="fa-brands fa-instagram fa-xl"></i></a>
+      <a href="https://www.twitter/mtrestaurants.com"> <i class="fa-brands fa-twitter fa-xl"></i></a>
+      <a href="https://www.facebook/mtrestaurants.com"><i class="fa-brands fa-facebook fa-xl"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

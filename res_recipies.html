@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Cedarville+Cursive&family=Pacifico&display=swap"
+		rel="stylesheet">
+	<title>Our Menu</title>
+	<style>
+		body {
+			/* font-family: Cedarville Cursive; */
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			margin: 0px;
+			/* background-color: black; */
+			/* background-color: rgb(185, 185, 185); */
+			background-color: black;
+			color: white;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 10;
+		}
+
+		nav {
+			/* background-color: rgb(185, 185, 185); */
+			background-color: rgb(194, 105, 27);
+			height: 75px;
+		}
+
+		nav h2 {
+			/* color: #F9EBC8; */
+			color: white;
+			position: absolute;
+			top: -25px;
+			left: 100px;
+			font-family: 'Agbalumo';
+			font-size: 40px;
+			font-weight: 500;
+		}
+
+		ul {
+			position: relative;
+			top: -65px;
+			left: 600px;
+			width: 700px;
+		}
+
+		.drop-items {
+			list-style-type: none;
+			display: none;
+			width: fit-content;
+			padding: 10px;
+		}
+
+		.drop-items .drop-items-item {
+			margin: 0px;
+			display: block;
+			padding: 4px;
+		}
+
+		.dropdown:hover .drop-items {
+			position: absolute;
+			z-index: 8;
+			background-color: rgb(194, 105, 27);
+			border-radius: 10px;
+			display: block;
+			left: 340px;
+			top: 30px;
+		}
+
+		.nav-item {
+			display: inline;
+			margin-left: 60px;
+			padding: 10px;
+		}
+
+		a:link,
+		a:visited {
+			text-decoration: none;
+			/* color: #022c30; */
+			color: white;
+		}
+
+		a:hover {
+			/* text-shadow: 3px 3px 5px rgb(251, 245, 245); */
+			transition: all ease-in-out 0.2s;
+			/* color: rgb(245, 111, 9); */
+			color: black;
+		}
+
+		.chefpraise {
+			padding-top: 100px;
+			margin-left: 400px;
+		}
+
+		.tag {
+			position: absolute;
+			top: 150px;
+			left: 800px;
+			/* z-index: 0; */
+		}
+
+		.tag p {
+			text-align: center;
+			font-weight: 900;
+			font-size: 30px;
+			color: rgb(194, 105, 27);
+			line-height: 0px;
+		}
+
+		.tag p:first-child {
+			/* position: absolute;*/
+			/* font-family: 'Cedarville Cursive', cursive; */
+			font-family: 'Pacifico', cursive;
+			/* top: -20px; */
+			font-size: 50px;
+		}
+
+		/* .tag p:nth-child(2) {
+			position: absolute;
+			top: 55px;
+		}
+
+		.tag p:last-child {
+			position: absolute;
+			top: 70px;
+		} */
+		li {
+			list-style-type: decimal;
+			line-height: 30px;
+		}
+
+		.starters {
+			position: absolute;
+			top: 450px;
+			left: 44%;
+			border-radius: 20px;
+			font-size: 30px;
+			/* text-decoration: underline; */
+		}
+
+		.veg-starters {
+			position: absolute;
+			border-radius: 25px;
+			left: 35px;
+			top: 550px;
+			width: 700px;
+			height: 300px;
+			/* border-right: 2px solid white;
+			border-left: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+		}
+
+		.veg-starters h3 {
+			padding-left: 30px;
+		}
+
+		.veg-starters:nth-child(2) img {
+			position: absolute;
+			height: 300px;
+			left: 350px;
+			top: -40px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.veg-starters-list {
+			position: absolute;
+			left: 10px;
+			top: 50px;
+		}
+
+		.non-veg-starters {
+			margin-left: 10px;
+			position: absolute;
+			top: 550px;
+			left: 755px;
+			width: 720px;
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+			height: 300px;
+		}
+
+		.non-veg-starters h3 {
+			padding-left: 30px;
+		}
+
+		.non-veg-image {
+			position: absolute;
+			left: 350px;
+			height: 250px;
+			top: 0px;
+			width: 400px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.non-veg-starters-list {
+			position: absolute;
+			top: 50px;
+			left: 10px;
+		}
+
+		.maincourse h2 {
+			position: absolute;
+			top: 850px;
+			left: 43%;
+			/* text-decoration: underline; */
+			font-size: 30px;
+		}
+
+		/* .veg-main-course {
+			position: absolute;
+			left: 20px;
+			top: 700px;
+			width: 700px;
+			/* height: ; */
+		/* border-left: 2px solid yellow;
+			border-right: 2px solid yellow;
+		}
+*/
+		.veg-main-course {
+			position: absolute;
+			width: 700px;
+			height: 300px;
+			top: 950px;
+			left: 25%;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+		}
+
+		.veg-main-course h3 {
+			position: absolute;
+			top: -50px;
+			left: -330px;
+		}
+
+		.veg-main-image {
+			position: absolute;
+			top: 60px;
+			left: 320px;
+			height: 220px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.veg-main-course div:last-child {
+			position: absolute;
+			top: 120px;
+			left: -600px;
+		}
+
+		.chicken-main-course {
+			position: absolute;
+			top: 1330px;
+			left: 35px;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+			width: 700px;
+			height: 300px;
+		}
+
+		.non-vegetarian {
+			position: absolute;
+			top: 1250px;
+			left: 50px;
+		}
+
+		.chicken-main-course div:last-child h4 {
+			position: absolute;
+			top: 0px;
+			left: 300px;
+		}
+
+		.chicken-image {
+			position: absolute;
+			top: 10px;
+			height: 300px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.chicken-main-list {
+			position: absolute;
+			top: 70px;
+			left: 280px;
+		}
+
+		.mutton-main-course {
+			position: absolute;
+			top: 1330px;
+			left: 765px;
+			width: 700px;
+			height: 300px;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+		}
+
+		.mutton-main-course div:last-child h4 {
+			position: absolute;
+			top: 0px;
+			left: 340px;
+		}
+
+		.mutton-main-course div:first-child img {
+			position: absolute;
+			top: 55px;
+			left: 10px;
+			/* width: 250px; */
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.mutton-main-list {
+			position: absolute;
+			top: 70px;
+			left: 320px;
+			width: 300px;
+		}
+
+		.fish-main-course {
+			position: absolute;
+			top: 1660px;
+			left: 35px;
+			width: 700px;
+			height: 300px;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+		}
+
+		.fish-main-course div:first-child img {
+			position: absolute;
+			top: 0px;
+			left: 320px;
+			height: 250px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.fish-main-course div:last-child h4 {
+			position: absolute;
+			left: 35px;
+		}
+
+		.fish-main-course div:last-child ul {
+			position: absolute;
+			left: 10px;
+			top: 60px;
+		}
+
+		.prawns-main-course {
+			position: absolute;
+			top: 1660px;
+			left: 765px;
+			width: 700px;
+			height: 300px;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+		}
+
+		.prawns-main-course div:last-child h4 {
+			position: absolute;
+			left: 30px;
+		}
+
+		.prawns-main-course div:first-child img {
+			position: absolute;
+			top: 10px;
+			left: 350px;
+			height: 180px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.prawns-main-course div:last-child ul {
+			position: absolute;
+			left: 10px;
+			top: 60px;
+		}
+
+		.desserts {
+			position: absolute;
+			top: 2050px;
+			left: 35px;
+			width: 700px;
+			height: 300px;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+		}
+
+		.desserts div:last-child h2 {
+			position: absolute;
+			left: 10px;
+			top: -70px;
+		}
+
+		.desserts div:first-child img {
+			position: absolute;
+			top: 50px;
+			left: 10px;
+			height: 220px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.desserts div:last-child ul {
+			position: absolute;
+			left: 300px;
+			top: 80px;
+		}
+
+		.juices {
+			position: absolute;
+			top: 2050px;
+			left: 765px;
+			width: 700px;
+			height: 300px;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+		}
+
+		.juices div:last-child h2 {
+			position: absolute;
+			left: 10px;
+			top: -70px;
+		}
+
+		.juices div:first-child img {
+			position: absolute;
+			top: 0px;
+			left: -10px;
+			height: 300px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.juices div:last-child ul {
+			position: absolute;
+			left: 250px;
+			top: 80px;
+			width: 300px;
+		}
+
+		.cool-drinks {
+			position: absolute;
+			top: 2430px;
+			left: 300px;
+			width: 900px;
+			height: 300px;
+			/* border-left: 2px solid white;
+			border-right: 2px solid white; */
+			box-shadow: 1px 1px 10px white;
+			border-radius: 20px;
+		}
+
+		.cool-drinks div:last-child h2 {
+			position: absolute;
+			left: 10px;
+			top: -70px;
+		}
+
+		.cool-drinks div:first-child img {
+			position: absolute;
+			top: 0px;
+			left: 450px;
+			height: 300px;
+			filter: drop-shadow(1px 1px 2px rgb(194, 105, 27));
+		}
+
+		.cool-drinks div:last-child ul {
+			position: absolute;
+			left: 50px;
+			top: 80px;
+			width: 300px;
+		}
+
+		.color-style {
+			font-family: 'Pacifico';
+			color: rgb(194, 105, 27);
+			padding-left: 30px;
+		}
+
+		.des-style {
+			font-family: 'Pacifico';
+			color: rgb(194, 105, 27)
+		}
+
+		.foot-color {
+			color: white;
+		}
+
+		.rights {
+			position: absolute;
+			color: rgb(64, 62, 62);
+			top: 34px;
+			right: 1%;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		}
+
+		.follow {
+			position: absolute;
+			top: -10px;
+			left: 45%;
+			font-size: 20px;
+		}
+
+		.brands {
+			position: absolute;
+			top: 45px;
+			left: 43.5%;
+		}
+
+		.brands i {
+			padding-left: 23px;
+		}
+
+		.scale-out:hover {
+			transform: scale(1.05, 1.05);
+			transition: 0.3s;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h2> MT Restaurants</h2>
+			<img src="/images/restaurant_logo.png" alt="Restaurant logo" height="80">
+			<ul>
+				<li class="nav-item"><a href="index.html">Home</a></li>
+				<li class="nav-item"><a href="res_services.html">Services</a></li>
+				<li class="dropdown nav-item">
+					<a href="res_recipies.html">Menu<i class="fa-solid fa-caret-down"></i> </a>
+					<ul class="drop-items">
+						<li class="drop-items-item"><a href="res_recipies.html#starters-id">Starters</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#veg-main-course-id">Main Course</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#veg-main-course-id">Vegetarian</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#chicken-main-id">Non Vegetarian</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#desserts-id">Desserts</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#desserts-id">Juices</a></li>
+						<li class="drop-items-item"><a href="res_recipies.html#cool-drinks-id">Cool Drinks</a></li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="res_about.html">About</a></li>
+				<li class="nav-item"><a href="res_contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<img src="/images/chef_praising-removebg-preview.png" alt="Chef praising" class="chefpraise scale-out">
+			<div class="tag">
+				<p>Tasty</p>
+				<p>Foods</p>
+				<p>For You</p>
+			</div>
+		</section>
+		<section>
+			<h2 class="starters color-style" id="starters-id">Starters</h2>
+			<div class="veg-starters scale-out" id="veg-startes-id">
+				<h3 class="color-style">Vegetarian</h3>
+				<div>
+					<img src="/images/veg-starters-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<ul class="veg-starters-list ">
+						<li>Chilli Paneeer _ _ _ _ _ _ _ _ _ 280/-</li>
+						<li>Paneer Pakoda _ _ _ _ _ _ _ _ &nbsp;240/-</li>
+						<li>Aloo Tikki _ _ _ _ _ _ _ _ _ _ _ 160/-</li>
+						<li>Dahi Vada _ _ _ _ _ _ _ _ _ _ &nbsp; 120/-</li>
+						<li>Pani Puri _ _ _ _ _ _ _ _ _ _ _ _ 80/-</li>
+					</ul>
+				</div>
+			</div>
+			<div class="non-veg-starters scale-out" id="non-veg-startes-id">
+				<h3 class="color-style">Non Vegetarian</h3>
+				<div>
+					<img class="non-veg-image" src="/images/res_starters-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<ul class="non-veg-starters-list">
+						<li>Chicken Manchuria _ _ _ _ _ _ _ 175/-</li>
+						<li>Chicken Spring Rolls _ _ _ _ _ _ &nbsp;320/-</li>
+						<li>Chicken Pakoda_ _ _ _ _ _ _ _ _ 180/-</li>
+						<li>Chilli Prawns _ _ _ _ _ _ _ _ _ _ 360/-</li>
+						<li>Fish Fry_ _ _ _ _ _ _ _ _ _ _ _ _ 250/-</li>
+					</ul>
+				</div>
+			</div>
+			<div class="maincourse" id="veg-main-course-id">
+				<h2 class="color-style">Main Course</h2>
+			</div>
+			<div class="veg-main-course scale-out">
+				<h3 class="color-style">Vegetarian</h3>
+				<div>
+					<img class="veg-main-image" src="/images/veg-main-course-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<ul>
+						<li>Jira Rice _ _ _ _ _ _ _ _ _ _ _ _ _130/-</li>
+						<li>Palak Paneer_ _ _ _ _ _ _ _ _ _ _240/-</li>
+						<li>Curd Rice _ _ _ _ _ _ _ _ _ _ _ _ 110/-</li>
+						<li>Veg Biryani _ _ _ _ _ _ __ _ _ _ _140/-</li>
+						<li>Veg Fried Rice_ _ _ _ _ _ _ _ _ _ 120/-</li>
+					</ul>
+				</div>
+			</div>
+			<h3 class="non-vegetarian color-style" id="chicken-main-id">Non Vegetarian</h3>
+			<div class="chicken-main-course scale-out">
+				<div>
+					<img class="chicken-image" src="/images/chicken-main-course-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<h3 class="color-style">Chicken</h3>
+					<ul class="chicken-main-list">
+						<li>Chicken Biryani_ _ _ _ _ _ _ _ _ _ _ _ 160/-</li>
+						<li>Butter Chicken _ _ _ _ _ _ _ _ _ _ _ _ 160/-</li>
+						<li>Chicken Tikka Masala_ _ _ _ _ _ _ _ _ 160/-</li>
+						<li>Green Chicken _ _ _ _ _ _ _ _ _ _ _ _ 160/-</li>
+						<li>Ghee Roast Chicken_ _ _ _ _ _ _ _ _ _160/-</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mutton-main-course scale-out">
+				<div>
+					<img src="/images/mutton-main-course-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<h3 class="color-style">Mutton</h3>
+					<ul class="mutton-main-list">
+						<li>Mutton Biryani _ _ _ _ _ _ _ _ 190/-</li>
+						<li>Cordero Asado _ _ _ _ _ _ _ _ 360/-</li>
+						<li>Galouti Kabab_ _ _ _ _ _ _ _ _320/-</li>
+						<li>Khatta Meat_ _ _ _ _ _ _ _ _ _160/-</li>
+						<li>Parsi Mutton cutlets_ _ _ _ _ _160/-</li>
+					</ul>
+				</div>
+			</div>
+			<div class="fish-main-course scale-out" id="fish-main-id">
+				<div>
+					<img src="/images/fish-main-course-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<h3 class="color-style">Fish</h3>
+					<ul>
+						<li>Orange Soy Solmon _ _ _ _ _ _ _420/-</li>
+						<li>Easy Glazed Salmon_ _ _ _ _ _ _620/-</li>
+						<li>Tuna Fry_ _ _ _ _ _ _ _ _ _ _ _ _730/-</li>
+						<li>Peppered Tuna kababs_ _ _ _ _ _780/-</li>
+						<li>Tomoto Paoched Halibut_ _ _ _ _520/-</li>
+					</ul>
+				</div>
+			</div>
+			<div class="prawns-main-course scale-out" id="prawns-main-id">
+				<div>
+					<img src="/images/prawns-main-course-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<h3 class="color-style">Prawns</h3>
+					<ul>
+						<li>Kerala Fried Prawns _ _ _ _ _ _390/-</li>
+						<li>Spicy Prawns _ _ _ _ _ _ _ _ _ 445/-</li>
+						<li>Spicy Sriracha Prawns_ _ _ _ _ 530/-</li>
+						<li>Prawn Pulao _ _ _ _ _ _ _ _ _ _400/-</li>
+						<li>Malai Prawn Curry _ _ _ _ _ _ _360/-</li>
+					</ul>
+				</div>
+			</div>
+			</div>
+			<div class="desserts scale-out" id="desserts-id">
+				<div>
+					<img src="/images/desserts-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<h2 class="des-style">Desserts</h2>
+					<ul>
+						<li>Gulab Jamoon_ _ _ _ _ _ _ _ _ _ _ _80/-</li>
+						<li>Rasgulla_ _ _ _ _ _ _ _ _ _ _ _ _ _ _90/-</li>
+						<li>Khunafa_ _ _ _ _ _ _ _ _ _ _ _ _ _ _160/-</li>
+						<li>Kulfi _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _80/-</li>
+					</ul>
+				</div>
+			</div>
+			<div class="juices scale-out" id="juices-id">
+				<div>
+					<img src="/images/juices.webp" alt="">
+				</div>
+				<div>
+					<h2 class="des-style">Juices</h2>
+					<ul>
+						<li>Apple _ _ _ _ _ _ _ _ _ _ _ _120/-</li>
+						<li>Mango _ _ _ _ _ _ _ _ _ _ _ _60/-</li>
+						<li>Orange_ _ _ _ _ _ _ _ _ _ _ _40/-</li>
+						<li>Pomegranate_ _ _ _ _ _ _ _ _70/-</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cool-drinks scale-out" id="cool-drinks-id">
+				<div>
+					<img src="/images/cool_drinks-removebg-preview.png" alt="">
+				</div>
+				<div>
+					<h2 class="des-style">Cool Drinks</h2>
+					<ul>
+						<li>Lemon Soda _ _ _ _ _ _ _ _ _ _29/-</li>
+						<li>Orange Soda_ _ _ _ _ _ _ _ _ _49/-</li>
+						<li>Black Cola _ _ _ _ _ _ _ _ _ _ _39/-</li>
+						<li>Grape blast _ _ _ _ _ _ _ _ _ _ 89/-</li>
+						<li>Inkola (Special) _ _ _ _ _ _ _ _99/-</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer style="
+					width: 100%;
+					background-color: rgb(194, 105, 27);
+					height: 80px;	
+					position: absolute;
+					top: 2780px;">
+		<p class="rights foot-color">©All rights reserved</p>
+		<p class=" follow foot-color">Follow us on</p>
+		<div class="brands foot-color">
+			<a href="https://www.instagram/mtrestaurants.com"><i class="fa-brands fa-instagram fa-xl"></i></a>
+			<a href="https://www.twitter/mtrestaurants.com"> <i class="fa-brands fa-twitter fa-xl"></i></a>
+			<a href="https://www.facebook/mtrestaurants.com"><i class="fa-brands fa-facebook fa-xl"></i></a>
+		</div>
+	</footer>
+</body>
+
+</html>
